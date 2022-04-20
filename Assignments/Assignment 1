@@ -4,28 +4,52 @@ Name: Julia Nurfadhilah Binti Mohamad Fauzi
 Matric Number: 208256
 
 1-	Calculate a software availability quality attribute percentage where ;
-  a.	The software is down 2 hours per day.
-  22/24 X 100 = 91.67% availability
-  b.	The software is down 24 hours per week.
-  144/168 = 85.71% availability
+
+  	a.	The software is down 2 hours per day.
+		22/24 X 100 = 91.67% availability
+ 	b.	The software is down 24 hours per week.
+  		144/168 = 85.71% availability
 
 2-	Identify the used security techniques for a Laravel or  DevExpress XAF for the following items:
-  a.	Authentication
-  b.	Authorization.
-  c.	Encryption.
 
+  a.	Authentication
+  	Laravel includes a User model in your app/models directory which may be used with the default Eloquent authentication driver. 
+	When building the Schema for this Model, the password field is a minimum of 60 characters.
+	
+  b.	Authorization.
+  
+  	To log a user into your application, Auth::attempt is used method.
+	
+	if (Auth::attempt(array('email' => $email, 'password' => $password))) {
+	    return Redirect::intended('dashboard');
+	}
+	
+  c.	Encryption.
+  
+  	Laravel provides facilities for strong AES encryption via the mcrypt PHP extension:
+
+	1) Encrypting A Value : $encrypted = Crypt::encrypt('secret');
+
+	2) Decrypting A Value : $decrypted = Crypt::decrypt($encryptedValue);
+
+	3) Setting The Cipher & Mode : 
+		Crypt::setMode('ctr');
+		Crypt::setCipher($cipher);
+  
 3-	Calculate the estimated performance throughput of a software where:
   a.	The average data per order in 1000 byte.
   b.	The upload bandwidth of the server is 1 mbps.
 
-Throughput = (1 x (1000x8) )/ 1 = 8 kbps
+	Throughput = (1 x (1000x8) )/ 1 = 8 kbps
 
 4-	Calculate the estimated performance response time of a software where:
   a.	The average data per screen in 500 byte.
   b.	The average number of users in 200.
   c.	The download bandwidth of the server is 1 mbps.
-  Average think time, Tthink, is three seconds per request.
-  Tresponse = n/r - Tthink
-		= (200/ (500x8))
+
+ 	Tresponse = n/r - Tthink
+		  = (200/ (500x8)) - 3
     
 5-	Regarding question number 4, how many server you need to add to your system in order to reduce response time to 1 sec.
+
+	
