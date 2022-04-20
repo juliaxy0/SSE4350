@@ -1,9 +1,24 @@
 Quality Attribute Specification Assignment 
 
 1-	You are working in company XYZ required you to develop ticketing system for Cinema, the owner of Cinema is focusing on two things:
-  a.	Security system for purchase ticket using Credit Cards.
-  b.	The performance of booking tickets.
+
   Write scenarios for each requirement to get you client signature.
+  
+  a.	Security system for purchase ticket using Credit Cards.
+  Source : 
+  Stimulus :
+  Artifact :
+  Environment :
+  Response :
+  Response Measure: 
+  
+  b.	The performance of booking tickets.
+  Source : 
+  Stimulus :
+  Artifact :
+  Environment :
+  Response :
+  Response Measure: 
   
 2-	You are working in governmental sector and your boss required you to develop architecture to remove the overhead of official stamping for the documents 
 without losing security. Propose a proper architecture tactic to achieve this feature.
