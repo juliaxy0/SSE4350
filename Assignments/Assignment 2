@@ -4,33 +4,37 @@ Quality Attribute Specification Assignment
 
   Write scenarios for each requirement to get you client signature.
   
-  a.	Security system for purchase ticket using Credit Cards.
-  Source : 
-  Stimulus :
-  Artifact :
-  Environment :
-  Response :
-  Response Measure: 
-  
-  b.	The performance of booking tickets.
-  Source : 
-  Stimulus :
-  Artifact :
-  Environment :
-  Response :
-  Response Measure: 
+      a.	Security system for purchase ticket using Credit Cards.
+      Source : Valid credit card
+      Stimulus : A request to purchase ticket 
+      Artifact : Ticketing System
+      Environment : Under Normal Operation
+      Response : Transaction is successful
+      Response Measure: Data is stored within 1 hour
+
+      b.	The performance of booking tickets.
+      Source : User
+      Stimulus : User purchasing tickets
+      Artifact : Ticketing System
+      Environment : Under Normal Operation
+      Response : User obtain ticket
+      Response Measure: Latency of 6 seconds
   
 2-	You are working in governmental sector and your boss required you to develop architecture to remove the overhead of official stamping for the documents 
 without losing security. Propose a proper architecture tactic to achieve this feature.
 
+      A solution that can be implemented is decoupling user event capture from storage using a queue. This is to ensure overhead of trapping user events to be 
+      imperceptible to users. To achieve this tactic, the system must allow user event to be queued after being trapped. Then, the user event will be retured to user
+      thread. The event will be read from the queue accordingly. This will ensure user will not be detained and trapped when making a request.
+
 3-	You are working in a starting company with limited budget and your boss required you suggest some tactics to reduce the maintainability cost of the software.
 Propose three tactics for this objective.
 
-  Firstly, collaborate with other teams or external specialist.Through the participation of external specialists, we can accelerate your project until it is completed. 
-  Adding new team members is always a source of new ideas and a chance to cover all the gaps within the internal team.
-  
-  Secondly, never overdoing when adding improvements. It is better to keep the software simple but high functionality, or reuse and improvise existing softwares.
-  
-  Thirdly, always start with a transparent development process. Transparent processes mean that we can easily manage, control, estimate, and analyze the working processes 
-  to make the project more efficient, scalable, and successful.Involve all company levels in the process and ensure that everyone is moving in one direction. 
-  When we do not have a precise plan for the end product, we may end up with a mess that will require high maintenance costs.
+      Firstly, collaborate with other teams or external specialist.Through the participation of external specialists, we can accelerate your project until it is completed. 
+      Adding new team members is always a source of new ideas and a chance to cover all the gaps within the internal team.
+
+      Secondly, never overdoing when adding improvements. It is better to keep the software simple but high functionality, or reuse and improvise existing softwares.
+
+      Thirdly, always start with a transparent development process. Transparent processes mean that we can easily manage, control, estimate, and analyze the working processes 
+      to make the project more efficient, scalable, and successful.Involve all company levels in the process and ensure that everyone is moving in one direction. 
+      When we do not have a precise plan for the end product, we may end up with a mess that will require high maintenance costs.
